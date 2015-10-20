@@ -5,7 +5,7 @@ public class Example : MonoBehaviour {
 
 private Texture2D colBack;
 private Texture2D colFront;
-public float Health;
+public float Health=90f;
 public float MaxHealth=100f;
 public float HealthBarHeight=2f;
 
