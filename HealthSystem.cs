@@ -4,7 +4,7 @@ using System.Collections;
 public class HealthSystem : MonoBehaviour {
 float healthBarLenght=20f;//Length for Healthbar;
 
-public static void Set_HealthBar(Transform transform,int HealthBarHeight,	float CurrentHealth,float MaxHealth,Texture2D BackBar, Texture2D FrontBar)
+public void Set_HealthBar(Transform transform,int HealthBarHeight,	float CurrentHealth,float MaxHealth,Texture2D BackBar, Texture2D FrontBar)
 		{
 		Vector3 screenPosition;
   
@@ -23,7 +23,7 @@ public static void Set_HealthBar(Transform transform,int HealthBarHeight,	float 
 }
 		
 		
-	public static Texture2D Colors(int r,int g, int b)
+public  Texture2D Colors(int r,int g, int b)
 	{
 		Texture2D texture = new Texture2D(2, 2);
 		for (int y = 0; y < texture.height; ++y)
