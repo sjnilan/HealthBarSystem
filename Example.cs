@@ -7,7 +7,7 @@ private Texture2D colBack;
 private Texture2D colFront;
 public float Health=90f;
 public float MaxHealth=100f;
-public float HealthBarHeight=2;
+public int HealthBarHeight=2;
 HealthSystem  HS =New HealthSystem ();
 
 void Start () {
