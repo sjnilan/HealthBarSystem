@@ -3,11 +3,15 @@ Health bar system  for Unity3d 5+
 
 Add example cs file to any object that you want to use health bar.
 
-use HealthSystem.Colors funtion to set Health bar background and indicator color
+Define HealthSystem instance 
+       HealthSystem  HealthBar;
 
-ex: 
-    
-HealthSystem.Colors(0,0,0); //Black
+In Start function 
+	   HealthBar = GetComponent<HealthBarSystem>();
 
-HealthSystem.Colors(0,255,0);//Green
+
+When damage is taken
+	HealthBar.Hit();
+	HealthBar.SetHelthValue ( HealthNeedToDisplay);
+}
 
