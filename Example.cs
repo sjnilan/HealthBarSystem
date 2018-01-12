@@ -1,29 +1,20 @@
 using UnityEngine;
 using System.Collections;
 
-public class Example : MonoBehaviour {
-
-private Texture2D colBack;
-private Texture2D colFront;
-public float Health=90f;
-public float MaxHealth=100f;
-public int HealthBarHeight=2;
-HealthSystem  HS =New HealthSystem ();
+public class Enemy : MonoBehaviour {
+public float Health=100f;
+float temp_Health;
+HealthSystem  HealthBar;
 
 void Start () {
-	colBack=HS.Colors(0,0,0);//Black color bar
-	colFront=HS.Colors(0,255,0);//Green color bar - Health indicator
+	HealthBar = GetComponent<HealthBarSystem>();
+	temp_Health=Health;
 }
 
-void OnGUI(){
-	HS.Set_HealthBar(
-		transform,
-		HealthBarHeight,
-		Health,
-		MaxHealth,
-		colBack,
-		colFront);
+public void TakeDamage(float  _Damage){
+	HealthBar.Hit();
+	temp_Health = temp_Health - _Damage;
+	HealthBar.SetHelthValue ( temp_Health);
 }
-
 
 }
