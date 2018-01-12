@@ -24,7 +24,6 @@ public class HealthBarSystem : MonoBehaviour
     {
         colBack = Colors(BackColor);//Black color bar
         colFront = Colors(HealthBarColor);//Green color bar - Health indicator
-
         FadeOuttimer_temp = FadeOuttimer;
     }
 
