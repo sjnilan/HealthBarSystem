@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
+public class Example : MonoBehaviour {
 public float Health=100f;
 float temp_Health;
 HealthSystem  HealthBar;
